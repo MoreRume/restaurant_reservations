@@ -3,7 +3,7 @@ import { listReservations } from "../utils/api";
 import ErrorAlert from "../layout/ErrorAlert";
 import { useHistory } from "react-router-dom";
 import { previous, next } from "../utils/date-time";
-import TablesList from "../tables/TablesList";
+import TableList from "../tables/TableList";
 import ReservationList from "../reservations/ReservationList";
 import { today } from "../utils/date-time";
 import useQuery from "../utils/useQuery";
@@ -65,7 +65,7 @@ function Dashboard({ date }) {
           <button className="btn btn-dark btn-md" onClick={previousDayHandler}>
             Previous
           </button>
-          <button className="btn btn-dark btn-md" onClick={todayHandler}>
+          <button className="btn btn-dark btn-md" onClick={presentDayHandler}>
             Today
           </button>
           <button className="btn btn-dark btn-md" onClick={nextDayHandler}>
@@ -75,7 +75,7 @@ function Dashboard({ date }) {
       </div>
       <ReservationList reservations={reservations} />
       <ErrorAlert error={reservationsError} />
-      <TablesList tables={tables} />
+      <TableList tables={tables} />
       <ErrorAlert error={tablesError} />
       {/* {JSON.stringify(reservations)} */}
     </main>

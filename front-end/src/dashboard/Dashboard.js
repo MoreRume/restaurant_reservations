@@ -23,7 +23,7 @@ function Dashboard({ date }) {
   const [reservationsError, setReservationsError] = useState(null);
   const [currentDate, setCurrentDate] = useState(date);
   const [ tables, setTables] = useState([]);
-  const [TablesError, setTablesError] = useState(null);
+  const [tablesError, setTablesError] = useState(null);
   const history = useHistory();
 
   useEffect(loadDashboard, [currentDate]);
@@ -75,7 +75,7 @@ function Dashboard({ date }) {
       </div>
       <ReservationList reservations={reservations} />
       <ErrorAlert error={reservationsError} />
-      <TableList tables={tables} />
+      <TablesList tables={tables} />
       <ErrorAlert error={tablesError} />
       {/* {JSON.stringify(reservations)} */}
     </main>

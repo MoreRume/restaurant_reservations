@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { createReservation } from "../utils/api";
-import ReservationForm from "/ReservationForm";
+import ReservationForm from "./ReservationForm";
 import ErrorAlert from "../layout/ErrorAlert";
-import { userParams } from "../../../back-end/src/db/connection";
+//import { userParams } from "../../back-end/src/db/connection";
 
 function ReservationNew() {
     const history = useHistory();

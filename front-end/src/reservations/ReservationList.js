@@ -10,31 +10,30 @@ function ReservationList({ reservations }) {
 
     const resiList = reservations.map(
         ({
-            reservation_id,
-            first_name,
-            last_name,
-            mobile_number,
-            reservation_date,
-            reservation_time,
-            people,
-            status,
+          reservation_id,
+          first_name,
+          last_name,
+          mobile_number,
+          reservation_date,
+          reservation_time,
+          people,
+          status,
         }) => {
-            const cancelHandler = (e) => {
-                e.preventDefault();
-                const abortController = new AbortController();
-                const message = `Do you want to cancel this reservation?`;
-                const clicked = window.confirm(message);
-                setError(null);
-                if(clicked){
-                    cancelReservation(
-                        { status: "cancelled" },
-                        reservation_id,
-                        abortController.signal)
-                        .then(() => history.push("/"));
-                    
-                }
-                return () => abortController.abort();
-            };
+          const cancelHandler = (e) => {
+            e.preventDefault();
+            const controller = new AbortController();
+            const message = `Do you want to cancel this reservation? This cannot be undone.`;
+            const clicked = window.confirm(message);
+            setError(null);
+            if (clicked) {
+              cancelReservation(
+                { status: "cancelled" },
+                reservation_id,
+                controller.signal
+              ).then(() => history.push("/"));
+            }
+            return () => controller.abort();
+          };
 
             if (status !== "finished"){
                 return (

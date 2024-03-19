@@ -67,6 +67,8 @@ function Edit() {
     const cancelHandler = (e) => {
         e.preventDefault();
         const abortController = new AbortController();
+        history.push("/");
+        return () => abortController.abort();
     };
 
     return (

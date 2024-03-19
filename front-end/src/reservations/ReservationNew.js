@@ -67,6 +67,7 @@ function ReservationNew() {
             <ErrorAlert error={resiError} />
             <ReservationForm
             changeHandler={changeHandler}
+            changePeopleHandler={changePeopleHandler}
             reservation={reservation}
             submitHandler={submitHandler}
             cancelHandler={cancelHandler}

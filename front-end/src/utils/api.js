@@ -2,7 +2,7 @@
  * Defines the base URL for the API.
  * The default values is overridden by the `API_BASE_URL` environment variable.
  */
-import { json } from "express";
+
 import formatReservationDate from "./format-reservation-date";
 import formatReservationTime from "./format-reservation-date";
 
@@ -64,9 +64,7 @@ export async function listReservations(params, signal) {
   Object.entries(params).forEach(([key, value]) =>
     url.searchParams.append(key, value.toString())
   );
-  return await fetchJson(url, { headers, signal }, [])
-    .then(formatReservationDate)
-    .then(formatReservationTime);
+  return await fetchJson(url, { headers, signal, method: "GET" }, []);
 }
 
 export async function updateReservation(reservation, signal){
@@ -83,13 +81,8 @@ export async function updateReservation(reservation, signal){
 
 export async function createReservation(reservation, signal){
   const url = `${API_BASE_URL}/reservations`;
-  const options = {
-    method: "POST",
-    headers,
-    body: JSON.stringify({ data: reservation }),
-    signal,
-  };
-  return await fetchJson(url, options, reservation);
+  const body = JSON.stringify({ data: reservation });
+  return await fetchJson(url, { headers, signal, method: "POST", body }, [])
 };
 
 export async function readReservation(reservation_id, signal){
@@ -132,7 +125,6 @@ export async function SeatReservation(reservation_id, table_id){
     method: "PUT",
     headers,
     body: JSON.stringify({ data: { reservation_id } }),
-    signal,
   };
   return await fetchJson(url, options, {});
 };
@@ -153,7 +145,6 @@ export async function cancelReservation(status, reservation_id){
     method: "DELETE",
     headers,
     body: JSON.stringify({ data: { status } }),
-    signal,
   };
   return await fetchJson(url, options);
 };

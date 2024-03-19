@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 import { listReservations } from "../utils/api";
 
 
-function SearchRes(){
+function SearchResi(){
     
     const [mobile_number, setMobileNumer] = useState("");
     const [reservations, setReservations] = useState(null);
@@ -85,4 +85,4 @@ function SearchRes(){
       );
 }
 
-export default SearchRes;
+export default SearchResi;

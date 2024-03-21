@@ -8,11 +8,11 @@ require('dotenv').config();
 const path = require("path");
 
 const {
-  DATABASE_URL = "postgresql://postgres@localhost/postgres",
-  DATABASE_URL_DEVELOPMENT = "postgresql://postgres@localhost/postgres",
-  DATABASE_URL_TEST = "postgresql://postgres@localhost/postgres",
-  DATABASE_URL_PREVIEW = "postgresql://postgres@localhost/postgres",
-  DEBUG,
+  DATABASE_URL = "postgres://tyjgxksc:0816aaohTfmfCLpX3J8-KoQgGkbLNrO0@ruby.db.elephantsql.com/tyjgxksc",
+  DATABASE_URL_DEVELOPMENT = "postgres://tyjgxksc:0816aaohTfmfCLpX3J8-KoQgGkbLNrO0@ruby.db.elephantsql.com/tyjgxksc",
+  DATABASE_URL_TEST = "postgres://tyjgxksc:0816aaohTfmfCLpX3J8-KoQgGkbLNrO0@ruby.db.elephantsql.com/tyjgxksc",
+  DATABASE_URL_PREVIEW = "postgres://tyjgxksc:0816aaohTfmfCLpX3J8-KoQgGkbLNrO0@ruby.db.elephantsql.com/tyjgxksc",
+  DEBUG,p
 } = process.env;
 
 module.exports = {

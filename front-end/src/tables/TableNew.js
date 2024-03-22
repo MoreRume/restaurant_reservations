@@ -42,7 +42,7 @@ function TableNew() {
     const cancelHandler = (e) => {
         e.preventDefault();
         const abortController = new AbortController();
-        history.goBack();
+        history.push("/");
         return () => abortController.abort();
     };
 

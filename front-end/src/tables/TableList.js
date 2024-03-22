@@ -37,7 +37,7 @@ return (
             <button
               data-table-id-finish={table.table_id}
               type="button"
-              className="btn btn-info btn-md"
+              className="btn btn-info btn-lg"
               onClick={finishHandler}
               value={table.table_id}
             >

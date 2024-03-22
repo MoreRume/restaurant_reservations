@@ -38,10 +38,10 @@ function Routes() {
       <Route path="/reservations/new">
         <ReservationNew />
       </Route>
-      <Route path="tables/new">
+      <Route path="/tables/new">
         <TableNew />
       </Route>
-      <Route path="search">
+      <Route path="/search">
         <SearchResi />
       </Route>
       <Route path="/reservations/:reservation_id/seat">

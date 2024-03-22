@@ -18,7 +18,7 @@ function ReservationNew() {
     };
 
     const [reservation, setReservation] = useState({...initialResiState,});
-    const [resiError, setResiError] = useState();
+    const [resiError, setResiError] = useState(null);
 
     const changeHandler = (e) => {
         if(e.target.name === "mobile_number"){

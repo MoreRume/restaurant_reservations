@@ -8,11 +8,11 @@ require('dotenv').config();
 const path = require("path");
 
 const {
-  DATABASE_URL = "postgres://tyjgxksc:0816aaohTfmfCLpX3J8-KoQgGkbLNrO0@ruby.db.elephantsql.com/tyjgxksc",
-  DATABASE_URL_DEVELOPMENT = "postgres://tyjgxksc:0816aaohTfmfCLpX3J8-KoQgGkbLNrO0@ruby.db.elephantsql.com/tyjgxksc",
-  DATABASE_URL_TEST = "postgres://tyjgxksc:0816aaohTfmfCLpX3J8-KoQgGkbLNrO0@ruby.db.elephantsql.com/tyjgxksc",
-  DATABASE_URL_PREVIEW = "postgres://tyjgxksc:0816aaohTfmfCLpX3J8-KoQgGkbLNrO0@ruby.db.elephantsql.com/tyjgxksc",
-  DEBUG,p
+  DATABASE_URL = "postgres://vtquzzwo:muLllJME26bMD73TW6bKvCTQezG8Ikw5@raja.db.elephantsql.com/vtquzzwo",
+  DATABASE_URL_DEVELOPMENT = "postgres://vtquzzwo:muLllJME26bMD73TW6bKvCTQezG8Ikw5@raja.db.elephantsql.com/vtquzzwo",
+  DATABASE_URL_TEST = "postgres://vtquzzwo:muLllJME26bMD73TW6bKvCTQezG8Ikw5@raja.db.elephantsql.com/vtquzzwo",
+  DATABASE_URL_PREVIEW = "postgres://vtquzzwo:muLllJME26bMD73TW6bKvCTQezG8Ikw5@raja.db.elephantsql.com/vtquzzwo",
+  DEBUG,
 } = process.env;
 
 module.exports = {

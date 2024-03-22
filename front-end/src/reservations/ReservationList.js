@@ -49,13 +49,13 @@ function ReservationList({ reservations }) {
                             {status === "booked" ? (
                                 <div>
                                     <Link to ={`/reservations/${reservation_id}/seat`}>
-                                        <button className="btn btn-primary btn-md">Seat</button>
+                                        <button className="btn btn-primary btn-lg">Seat</button>
                                     </Link>
                                     <Link to ={`/reservations/${reservation_id}/edit`}>
-                                        <button className="btn btn-success btn-md">Edit</button>
+                                        <button className="btn btn-info btn-lg">Edit</button>
                                     </Link>
                                     <button
-                                    className="btn btn-danger btn-md"
+                                    className="btn btn-danger btn-lg"
                                     data-reservation-id-cancel={reservation_id}
                                     onClick={cancelHandler}
                                     >

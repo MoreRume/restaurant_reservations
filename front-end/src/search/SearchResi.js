@@ -42,8 +42,8 @@ function SearchResi(){
               value={mobile_number}
             />
             <div>
-              <button type="submit" className="btn btn-dark btn-md" onClick={submitHandler}>
-                Find
+              <button type="submit" className="btn btn-success btn-lg" onClick={submitHandler}>
+                Search
               </button>
             </div>
           </form>

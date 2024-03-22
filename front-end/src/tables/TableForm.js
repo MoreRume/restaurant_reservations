@@ -30,7 +30,7 @@ function TableForm({ tableData, changeHandler, submitHandler, cancelHandler, cha
                         />
                     </div>
                     <div className="group-row">
-                        <button className="btn btn-primary btn-md" type="submit" onClick={submitHandler}>
+                        <button className="btn btn-success btn-md" type="submit" onClick={submitHandler}>
                             Submit
                         </button>
                         <button className="btn btn-danger btn-md" type="button" onClick={cancelHandler}>

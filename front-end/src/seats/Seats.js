@@ -63,7 +63,7 @@ function Seats() {
                     <option defaultValue>Select a table</option>
                     {tableList}
                 </select>
-                <button type="submit" className="btn btn-primary btn-md" onClick={submitHandler} >Submit</button>
+                <button type="submit" className="btn btn-info btn-lg" onClick={submitHandler} >Submit</button>
                 <button type="reset" className="btn brn-danger btn-md" onClick={cancelHandler}>Cancel</button>
             </form>
         </div>

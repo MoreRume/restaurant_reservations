@@ -22,7 +22,7 @@ return (
           <th scope="col">Table Name</th>
           <th scope="col">Capacity</th>
           <th scope="col">Status</th>
-          <th scope="col">Click when table is open</th>
+          <th scope="col">Click when table is free</th>
         </tr>
       </thead>
       <tbody>{tables.map((table) => {
@@ -37,7 +37,7 @@ return (
             <button
               data-table-id-finish={table.table_id}
               type="button"
-              className="btn btn-warning btn-md"
+              className="btn btn-info btn-md"
               onClick={finishHandler}
               value={table.table_id}
             >

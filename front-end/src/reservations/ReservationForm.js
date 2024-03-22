@@ -1,6 +1,6 @@
 import React from "react";
 
-function ReservationForm({reservation, changeHandler, submitHandler, changePeopleHandler}){
+function ReservationForm({reservation, changeHandler, cancelHandler, submitHandler, changePeopleHandler}){
     return(
     <div>
         <form>

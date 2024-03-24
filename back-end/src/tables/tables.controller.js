@@ -125,11 +125,10 @@ async function list(req, res){
 }
 
 async function create(res, res){
-    const { table_name, capacity, reservation_id } = req.body.data;
+    const { table_name, capacity } = req.body.data;
     const newTableData = {
         table_name,
         capacity,
-        reservation_id,
     };
     const newTable = await service.create(newTableData);
     res.status(201).json({ data: newTableData });

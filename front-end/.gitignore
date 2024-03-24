@@ -19,6 +19,9 @@
 .env.test.local
 .env.production.local
 .vercel
+.env.sample
+.project
+.eslintcache
 
 npm-debug.log*
 yarn-debug.log*

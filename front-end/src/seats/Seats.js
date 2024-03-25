@@ -8,12 +8,13 @@ function Seats() {
     const history = useHistory();
     const [reservation, setReservations] = useState({});
     const [tables, setTables] = useState([]);
-    const [tablesError, setTableError] = useState([]);
+    const [tablesError, setTableError] = useState(null);
     const [tableId, setTableId] = useState(null);
 
     useEffect(loadTables, []);
 
     function loadTables() {
+        console.log("loadTables")
         const abortController = new AbortController();
         setTableError(null);
         listTables(abortController.signal)

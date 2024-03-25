@@ -6,8 +6,8 @@ import ErrorAlert from "../layout/ErrorAlert";
 function Seats() {
 
     const history = useHistory();
-    const { reservation_id } = useParams();
-    const [tables, setTables] = useState([]);
+    const [reservation, setReservations] = useState({});
+    const [tables, setTables] = useState(null);
     const [tablesError, setTableError] = useState([]);
     const [tableId, setTableId] = useState(0);
 
@@ -25,7 +25,7 @@ function Seats() {
     const submitHandler = (e) => {
         e.preventDefault();
         const abortController = new AbortController();
-        updateSeat(reservationId.reservation_id, tableId, abortController.signal)
+        updateSeat(reservation.reservation_id, tableId, abortController.signal)
         .then(() => history.push("/"))
         .catch(setTableError);
         return () => abortController.abort();

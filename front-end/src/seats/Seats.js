@@ -54,7 +54,7 @@ function Seats() {
         <div>
             <h1>Seat Reservation</h1>
             <ErrorAlert error={tablesError} />
-            <form className="d-flex">
+            <form className="d-flex" onSubmit={submitHandler}>
                 <select
                 id="table_id"
                 name="table_id"
@@ -64,7 +64,7 @@ function Seats() {
                     <option defaultValue>Select a table</option>
                     {tableList}
                 </select>
-                <button type="submit" className="btn btn-info btn-lg" onSubmit={submitHandler} >Submit</button>
+                <button type="submit" className="btn btn-info btn-lg">Submit</button>
                 <button type="reset" className="btn btn-danger btn-md" onClick={cancelHandler}>Cancel</button>
             </form>
         </div>

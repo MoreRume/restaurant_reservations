@@ -23,6 +23,7 @@ function Seats() {
     };
 
     const submitHandler = (e) => {
+        console.log(submitHandler)
         e.preventDefault();
         const abortController = new AbortController();
         updateSeat(tableId, reservation_id, abortController.signal)

@@ -23,7 +23,7 @@ function SearchResi(){
         listReservations({ mobile_number }, abortController.signal)
         .then((resi) => {
             setReservations(resi);
-            history.push("/serach");
+            history.push("/search");
         })
         return () => abortController.abort();
     };

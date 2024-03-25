@@ -6,15 +6,15 @@ import ErrorAlert from "../layout/ErrorAlert";
 function Seats() {
 
     const history = useHistory();
-    const [reservation, setReservations] = useState({});
+    const { reservation_id } = useParams();
     const [tables, setTables] = useState([]);
-    const [tablesError, setTableError] = useState(null);
-    const [tableId, setTableId] = useState(null);
+    const [tablesError, setTableError] = useState([]);
+    const [tableId, setTableId] = useState(0);
 
     useEffect(loadTables, []);
 
     function loadTables() {
-        console.log("loadTables")
+        console.log(loadTables())
         const abortController = new AbortController();
         setTableError(null);
         listTables(abortController.signal)
@@ -24,9 +24,10 @@ function Seats() {
     };
 
     const submitHandler = (e) => {
+        console.log(submitHandler())
         e.preventDefault();
         const abortController = new AbortController();
-        updateSeat(reservation.reservation_id, tableId, abortController.signal)
+        updateSeat(reservation_id, tableId, abortController.signal)
         .then(() => history.push("/"))
         .catch(setTableError);
         return () => abortController.abort();

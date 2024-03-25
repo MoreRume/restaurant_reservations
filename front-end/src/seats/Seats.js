@@ -7,9 +7,9 @@ function Seats() {
 
     const history = useHistory();
     const [reservation, setReservations] = useState({});
-    const [tables, setTables] = useState(null);
+    const [tables, setTables] = useState([]);
     const [tablesError, setTableError] = useState([]);
-    const [tableId, setTableId] = useState(0);
+    const [tableId, setTableId] = useState(null);
 
     useEffect(loadTables, []);
 

@@ -7,7 +7,7 @@ function TableList({ tables }) {
     const finishHandler = (e) => {
       e.preventDefault();
       const abortcontroller = new AbortController();
-      const message = `Is this table ready to seat new guests? This cannot be undone.`;
+      const message = `Is this table ready to seat new guests?`;
       if (window.confirm(message)) {
         unassignTable(e.target.value, abortcontroller.signal)
         .then(() => history.push("/"))

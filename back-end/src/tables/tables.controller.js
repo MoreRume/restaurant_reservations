@@ -28,7 +28,7 @@ function hasId(req, res, next) {
 async function validResi(req, res, next) {
     const resiId = req.body.data.reservation_id;
     const reservation = await service.readResi(resiId);
-    if(reservation){s
+    if(reservation){
         res.locals.reservation = reservation;
         return next();
     }
@@ -124,7 +124,7 @@ async function list(req, res){
     res.json({ data: tables });
 }
 
-async function create(res, res){
+async function create(req, res){
     const { table_name, capacity } = req.body.data;
     const newTableData = {
         table_name,

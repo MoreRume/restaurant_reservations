@@ -55,14 +55,15 @@ function Seats() {
             <h1>Seat Reservation</h1>
             <ErrorAlert error={tablesError} />
             <form className="d-flex" onSubmit={submitHandler}>
-                <select
-                id="table_id"
-                name="table_id"
-                required={true}
-                onChange={changeHandler}
-                >
+                <select name="table_id" className="form-select mb-2 mr-1" aria-label="Select Table" id="table_id" onChange={changeHandler}>
                     <option defaultValue>Select a table</option>
-                    {tableList}
+                    {tables.map((table) => {
+                        return(
+                            <option value={table.table_id} key={table.table_id}>
+                                {table.table_name} - {table.capacity}
+                            </option>
+                        );
+                    })}
                 </select>
                 <button type="submit" className="btn btn-info btn-lg">Submit</button>
                 <button type="reset" className="btn btn-danger btn-md" onClick={cancelHandler}>Cancel</button>

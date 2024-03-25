@@ -14,7 +14,6 @@ function Seats() {
     useEffect(loadTables, []);
 
     function loadTables() {
-        console.log(loadTables())
         const abortController = new AbortController();
         setTableError(null);
         listTables(abortController.signal)
@@ -24,10 +23,9 @@ function Seats() {
     };
 
     const submitHandler = (e) => {
-        console.log(submitHandler())
         e.preventDefault();
         const abortController = new AbortController();
-        updateSeat(reservation_id, tableId, abortController.signal)
+        updateSeat(tableId, reservation_id, abortController.signal)
         .then(() => history.push("/"))
         .catch(setTableError);
         return () => abortController.abort();
@@ -65,8 +63,8 @@ function Seats() {
                     <option defaultValue>Select a table</option>
                     {tableList}
                 </select>
-                <button type="submit" className="btn btn-info btn-lg" onClick={submitHandler} >Submit</button>
-                <button type="reset" className="btn btn-danger btn-md" onClick={cancelHandler}>Cancel</button>
+                <button type="submit" className="btn btn-info btn-lg" onSubmit={submitHandler} >Submit</button>
+                <button type="reset" className="btn brn-danger btn-md" onClick={cancelHandler}>Cancel</button>
             </form>
         </div>
     );

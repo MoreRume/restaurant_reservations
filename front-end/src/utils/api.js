@@ -143,7 +143,7 @@ export async function unassignTable(table_id, signal){
 export async function cancelReservation(status, reservation_id){
   const url = `${API_BASE_URL}/reservations/${reservation_id}/status`;
   const options = {
-    method: "DELETE",
+    method: "PUT",
     headers,
     body: JSON.stringify({ data: { status } }),
   };

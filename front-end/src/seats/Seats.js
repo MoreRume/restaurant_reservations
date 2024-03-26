@@ -22,11 +22,11 @@ function Seats() {
         return () => abortController.abort();
     };
 
-    const submitHandler = (e) => {
+    const submitHandler = async(e) => {
         console.log(submitHandler)
         e.preventDefault();
         const abortController = new AbortController();
-        updateSeat(tableId, reservation_id, abortController.signal)
+        await updateSeat(tableId, reservation_id, abortController.signal)
         .then(() => history.push("/"))
         .catch(setTableError);
         return () => abortController.abort();

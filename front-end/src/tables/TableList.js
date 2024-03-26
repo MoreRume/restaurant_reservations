@@ -5,7 +5,7 @@ function TableList({ tables }) {
     const history = useHistory();
   
     const finishHandler = (e) => {
-      e.preventDefault();
+      //e.preventDefault();
       const abortcontroller = new AbortController();
       const message = `Is this table ready to seat new guests?`;
       if (window.confirm(message)) {

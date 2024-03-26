@@ -108,13 +108,13 @@ async function tableFree(req, res, next){
 async function tableTaken(req, res, next){
     const resiId = res.locals.table.reservation_id;
     if (resiId){
-        next({
+        return next({
             message: `Table is occupied`,
             status: 400,
         });
-        return next();
+        
     }
-
+    return next();
 }
 
 // Time for the CRUD

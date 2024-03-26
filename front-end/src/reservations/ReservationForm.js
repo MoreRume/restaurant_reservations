@@ -41,7 +41,7 @@ function ReservationForm({reservation, changeHandler, cancelHandler, submitHandl
                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                 required={true}
                 value={reservation.mobile_number}
-                maxLength="10"
+                maxLength="12"
                 onChange={changePartyHandler}
                 />
             </div>

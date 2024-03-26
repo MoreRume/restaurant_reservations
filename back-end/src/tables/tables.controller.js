@@ -139,7 +139,7 @@ function read(req, res){
 }
 
 async function update(req, res){
-    const resiId = req.body.data.reservation_id;
+    const reservation_id = req.body.data.reservation_id;
     const { table_name, capacity, table_id } = res.locals.table;
     const tableUpdate = {
         table_id,
@@ -148,7 +148,7 @@ async function update(req, res){
         reservation_id,
     };
     const updateResi = { ...res.locals.reservation, status: "seated" };
-    const updateTable = await service.update(tableUpdate, updateResi);
+    const updatedTable = await service.update(tableUpdate, updateResi);
     res.status(200).json({ data: updatedTable });
 }
 

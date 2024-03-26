@@ -179,7 +179,6 @@ module.exports = {
         asyncErrorBoundary(validData),
         asyncErrorBoundary(hasId),
         asyncErrorBoundary(validResi),
-        asyncErrorBoundary(validResi),
         asyncErrorBoundary(resiAlreadySat),
         asyncErrorBoundary(checkCapacity),
         asyncErrorBoundary(tableTaken),

@@ -184,5 +184,6 @@ module.exports = {
         asyncErrorBoundary(tableTaken),
         asyncErrorBoundary(update),],
     delete: [asyncErrorBoundary(validTable),
-        asyncErrorBoundary(tableFree),],
+        asyncErrorBoundary(tableFree),
+    asyncErrorBoundary(destroy),],
 }

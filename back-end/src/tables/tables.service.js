@@ -2,9 +2,10 @@ const knex = require("../db/connection.js");
 
 
 function freeTable(table_id){
-    return knex("tables as t")
-    .join("reservations as r", "t.reservation_id", "reservation_id")
-    .where({ table_id });
+    return knex("tables").where({ table_id }).update({
+        reservation_id: null,
+        occupied: false,
+      });
 }
 
 function list() {

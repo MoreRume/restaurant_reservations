@@ -1,6 +1,6 @@
 import React from "react";
 
-function ReservationForm({reservation, changeHandler, cancelHandler, submitHandler, changePeopleHandler}){
+function ReservationForm({reservation, changeHandler, cancelHandler, submitHandler, changePartyHandler}){
     return(
     <div>
         <form>
@@ -82,7 +82,7 @@ function ReservationForm({reservation, changeHandler, cancelHandler, submitHandl
                 placeholder="##"
                 value={reservation.people}
                 maxLength="2"
-                onChange={changePeopleHandler}
+                onChange={changePartyHandler}
                 />   
             </div>
             <div className="group-row">

@@ -80,6 +80,7 @@ function ReservationForm({reservation, changeHandler, cancelHandler, submitHandl
                 id="people"
                 type="number"
                 placeholder="##"
+                required={true}
                 value={reservation.people}
                 maxLength="2"
                 onChange={changePartyHandler}

@@ -37,7 +37,7 @@ function ReservationNew() {
         }
     };
 
-    const changePeopleHandler = (e) => {
+    const changePartyHandler = (e) => {
         e.preventDefault();
         setReservation({
             ...reservation,
@@ -67,7 +67,7 @@ function ReservationNew() {
             <ErrorAlert error={resiError} />
             <ReservationForm
             changeHandler={changeHandler}
-            changePeopleHandler={changePeopleHandler}
+            changePartyHandler={changePartyHandler}
             reservation={reservation}
             submitHandler={submitHandler}
             cancelHandler={cancelHandler}

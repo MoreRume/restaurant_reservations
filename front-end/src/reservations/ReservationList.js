@@ -22,11 +22,15 @@ function ReservationList({ reservations }) {
           const cancelHandler = (e) => {
             e.preventDefault();
             const controller = new AbortController();
-            const message = `Do you want to cancel this reservation? This cannot be undone.`;
+            const message = `Do you want to cancel this reservation? This destruction is permanent.`;
             const clicked = window.confirm(message);
             setError(null);
             if (clicked) {
-             
+                cancelReservation(
+                    "cancelled",
+                    reservation_id,
+                    controller.signal
+                  ).then(() => history.push("/"));
             }
             return () => controller.abort();
           };

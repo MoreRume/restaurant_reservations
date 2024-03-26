@@ -2,7 +2,7 @@ const knex = require("../db/connection.js");
 
 
 function freeTable(table_id){
-    return knex("table as t")
+    return knex("tables as t")
     .join("reservation as r", "t.reservation_id", "reservation_id")
     .where({ table_id });
 }

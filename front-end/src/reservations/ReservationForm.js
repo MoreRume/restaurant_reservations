@@ -38,11 +38,11 @@ function ReservationForm({reservation, changeHandler, cancelHandler, submitHandl
                 id="mobile_number"
                 type="tel"
                 placeholder="123-456-7890"
-                pattern="[0-9] {3}- [0-9] {3}- [0-9] {4}"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                 required={true}
                 value={reservation.mobile_number}
                 maxLength="10"
-                onChange={changeHandler}
+                onChange={changePartyHandler}
                 />
             </div>
             <div>

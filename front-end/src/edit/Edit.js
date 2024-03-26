@@ -48,7 +48,7 @@ function Edit() {
     };
 
     const changePartyHandler = (e) => {
-        e.preventDefault();
+        //e.preventDefault();
         setReservation({
             ...reservation,
             [e.target.name]: Number(e.target.value),

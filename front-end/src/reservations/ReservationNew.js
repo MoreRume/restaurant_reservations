@@ -21,21 +21,13 @@ function ReservationNew() {
     const [resiError, setResiError] = useState(null);
 
     const changeHandler = (e) => {
-        if(e.target.name === "mobile_number"){
-            if(!isNaN(e.target.value)){
-                setReservation({
-                    ...reservation,
-                    [e.target.name]: e.target.value,
-                })
-            }
-        }
-        else{
+        console.log(e.target.value)
             setReservation({
                 ...reservation,
                 [e.target.name]: e.target.value,
             })
-        }
-    };
+        };
+    
 
     const changePartyHandler = (e) => {
         e.preventDefault();

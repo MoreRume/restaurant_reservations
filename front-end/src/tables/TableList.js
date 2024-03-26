@@ -10,7 +10,7 @@ function TableList({ tables }) {
       const message = `Is this table ready to seat new guests?`;
       if (window.confirm(message)) {
         unassignTable(e.target.value, abortcontroller.signal)
-        .then(() => history.push("/"))
+        .then(() => history.goBack())
       }
       return () => abortcontroller.abort();
     };

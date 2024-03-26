@@ -30,7 +30,7 @@ function ReservationList({ reservations }) {
                 { status: "cancelled" },
                 reservation_id,
                 controller.signal
-              ).then(() => history.push("/"));
+              ).then(() => history.go(0));
             }
             return () => controller.abort();
           };

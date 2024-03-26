@@ -26,11 +26,7 @@ function ReservationList({ reservations }) {
             const clicked = window.confirm(message);
             setError(null);
             if (clicked) {
-              cancelReservation(
-                { status: "cancelled" },
-                reservation_id,
-                controller.signal
-              ).then(() => history.go(0));
+             
             }
             return () => controller.abort();
           };

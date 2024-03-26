@@ -181,6 +181,7 @@ function postStatusCheck(req, res, next) {
 
 function updateStatusCheck(req, res, next) {
   const status = req.body.data.status;
+  console.log(status)
   if (
     status === "booked" ||
     status === "seated" ||

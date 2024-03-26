@@ -22,14 +22,17 @@ function Seats() {
         return () => abortController.abort();
     };
 
-    const submitHandler = async(e) => {
-        console.log(submitHandler)
+    const submitHandler = async (e) => {
         e.preventDefault();
         const abortController = new AbortController();
-        await updateSeat(tableId, reservation_id, abortController.signal)
-        .then(() => history.push("/"))
-        .catch(setTableError);
-        return () => abortController.abort();
+        try {
+            await updateSeat(tableId, reservation_id, abortController.signal);
+            history.push("/");
+        } catch (error) {
+            setTableError(error);
+        } finally {
+            abortController.abort();
+        }
     };
 
     function changeHandler (e){

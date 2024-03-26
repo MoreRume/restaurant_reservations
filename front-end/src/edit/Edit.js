@@ -31,21 +31,12 @@ function Edit() {
     useEffect(loadResi, [reservation_id])
 
     const changeHandler = (event) => {
-        if (event.target.name === "mobile_number"){
-            if(!isNaN(event.target.name)){
-                setReservation({
-                    ...reservation,
-                    [event.target.name]: event.target.value,
-                })
-            }
-        }
-        else{
             setReservation({
                 ...reservation,
                 [event.target.name]: event.target.value,
             })
-        }
-    };
+        };
+    
 
     const changePartyHandler = (e) => {
         e.preventDefault();

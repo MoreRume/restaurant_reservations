@@ -34,7 +34,7 @@ function firstName(req, res, next) {
     return next();
   }
   next({
-    message: "First name required",
+    message: "first_name required",
     status: 400,
   });
 }
@@ -44,7 +44,7 @@ function lastName(req, res, next){
     return next();
   }
   next({
-    message: "Last name required",
+    message: "last_name required",
     status: 400,
   });
 }

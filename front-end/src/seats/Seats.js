@@ -42,16 +42,10 @@ function Seats() {
 
     function cancelHandler(e){
         e.preventDefault();
-        history.push("/");
+        history.push("/reservations/new");
     };
 
-    const tableList = tables.map((table) =>{
-        return(
-            <option key={table.table_id} value={table.table_id}>
-                {table.table_name} - {table.capacity}
-            </option>
-        );
-    });
+    
 
     return(
         <div>

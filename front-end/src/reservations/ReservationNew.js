@@ -49,7 +49,7 @@ function ReservationNew() {
     const cancelHandler = (e) => {
         e.preventDefault();
         const abortController = new AbortController();
-        history.push("/");
+        history.go(-1);
         return () => abortController.abort();
     };
 

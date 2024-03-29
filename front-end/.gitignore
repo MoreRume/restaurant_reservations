@@ -22,6 +22,7 @@
 .env.sample
 .project
 .eslintcache
+.screenshots
 
 npm-debug.log*
 yarn-debug.log*

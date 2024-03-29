@@ -44,7 +44,7 @@ function ReservationList({ reservations }) {
                         <td>{reservation_date}</td>
                         <td>{reservation_time}</td>
                         <td>{people}</td>
-                        <td data-reservation-id-status={reservation_id}></td>
+                        <td data-reservation-id-status={reservation_id}>{status}</td>
                         <td>
                             {status === "booked" ? (
                                 <div>

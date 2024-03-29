@@ -90,7 +90,7 @@ function ReservationForm({reservation, changeHandler, cancelHandler, submitHandl
                 <button className="btn btn-danger btn-lg" type="button" onClick={cancelHandler}>
                     Cancel
                 </button>
-                <button className="btn btn-success btn-lg" type="button" onClick={submitHandler}>
+                <button className="btn btn-success btn-lg" type="submit" onClick={submitHandler}>
                     Submit
                 </button>
             </div>

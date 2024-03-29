@@ -54,7 +54,7 @@ function validMobileNumber(req, res, next){
     return next();
   }
   next({
-    message: "Mobile number required",
+    message: "mobile_number required",
     status: 400,
   });
 }
@@ -67,7 +67,7 @@ function validDate(req, res, next){
     return next();
   }
   next({
-    message: "Reservation date must be valid",
+    message: "reservation_date must be valid",
     status: 400,
   });
 }
@@ -79,7 +79,7 @@ function hasTime(req, res, next){
     return next();
   }
   next({
-    message: "Reservation time is required",
+    message: "reservation_time is required",
     status: 400,
   });
 }
@@ -93,7 +93,7 @@ function validTime(req, res, next){
     return next();
   }
   next({
-    message: "Reservation time not valid",
+    message: "reservation_time not valid",
     status: 400,
   });
 }
@@ -105,7 +105,7 @@ function validPeople(req, res, next){
     return next();
   }
   next({
-    message: "People input is not valid",
+    message: "people input is not valid",
     status: 400,
   });
 }

@@ -36,9 +36,8 @@ function ReservationForm({reservation, changeHandler, cancelHandler, submitHandl
                 <input
                 name="mobile_number"
                 id="mobile_number"
-                type="tel"
-                placeholder="123-456-7890"
-                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                type="number"
+                placeholder="1234567890"
                 required={true}
                 value={reservation.mobile_number}
                 maxLength="12"

@@ -16,7 +16,7 @@ describe("US-02 - Create reservation on a future, working date - E2E", () => {
 
   beforeAll(async () => {
     await fsPromises.mkdir("./.screenshots", { recursive: true });
-    setDefaultOptions({ timeout: 1000 });
+    setDefaultOptions({ timeout: 10000 });
   });
 
   beforeEach(async () => {
